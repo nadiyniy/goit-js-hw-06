@@ -26,5 +26,10 @@ const galleryInner = images
 gallery.insertAdjacentHTML("beforeend", galleryInner);
 
 console.log(gallery);
-const galleryImage = document.querySelector(".gallery .gallery-image");
-galleryImage.style.width = "100px";
+const galleryImage = document.querySelectorAll(".gallery .gallery-image");
+
+galleryImage.forEach(
+  (img) => (img.style.cssText = "width: 200px; display: block")
+);
+gallery.style.cssText =
+  "list-style: none; display: flex; gap: 20px; justify-content: center; align-items: center";
